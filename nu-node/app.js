@@ -27,10 +27,10 @@ app.use(
 	})
 );
 
-app.use("/api/v1/post", require("./routes/post"));
-app.use("/api/v1/user", require("./routes/user"));
+app.use("/api/v1/posts", require("./routes/post"));
+app.use("/api/v1/users", require("./routes/user"));
 app.use("/api/v1/auth", require("./routes/auth"));
 
 // port setup & listen to clients
 const port = process.env.PORT || 5000;
-app.listen(port, () => console.log("Server running...⚡"));
+app.listen(port, () => console.log("Server running..."));
