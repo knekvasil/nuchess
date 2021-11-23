@@ -13,11 +13,3 @@ const PostSchema = Schema({
 });
 
 module.exports = model("Post", PostSchema);
-
-// User
-// profileImage
-// postsCreated
-
-// comments
-// userId
-// text

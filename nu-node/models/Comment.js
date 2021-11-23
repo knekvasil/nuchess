@@ -30,7 +30,3 @@ const CommentSchema = Schema({
 });
 
 module.exports = model("Comment", CommentSchema);
-
-// comments
-// userId
-// text
