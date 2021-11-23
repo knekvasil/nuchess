@@ -26,31 +26,6 @@ router.get("/post/:id", async (req, res) => {
 	}
 });
 
-router.post("/post/imageUpload/:id", async (req, res) => {
-	const { id } = req.params;
-	const postToUpdate = await Post.findById(id);
-
-	//check for pre-exisiting images
-	if (postToUpdate.image) {
-		let array = postToUpdate.image.split("/");
-		let fileName = array[array.length - 1];
-		const [public_id] = fileName.split(".");
-		await cloudinary.uploader.destroy(public_id);
-	}
-
-	const { tempFilePath } = req.files.image;
-	const { secure_url } = await cloudinary.uploader.upload(tempFilePath);
-	postToUpdate.image = secure_url;
-	await postToUpdate.save();
-	try {
-		return res.status(201).json(postToUpdate);
-	} catch (error) {
-		return res
-			.status(500)
-			.json({ message: "There was an error uploading the image" });
-	}
-});
-
 router.post("/post", async (req, res) => {
 	const postToCreate = await Post.create(req.body);
 	try {
