@@ -1,2 +1,3 @@
 # nuchess
-"Bro... It's Facebook... but for chess enthusiasts!" - inspired by --> https://appideagenerator.com/
+
+"Bro... It's Facebook... but for chess enthusiasts!" - inspired by the [App Idea Generator](https://appideagenerator.com/).
