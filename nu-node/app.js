@@ -30,6 +30,7 @@ app.use(
 app.use("/api/v1/posts", require("./routes/post"));
 app.use("/api/v1/users", require("./routes/user"));
 app.use("/api/v1/auth", require("./routes/auth"));
+app.use("/api/v1/comments", require("./routes/comment"));
 
 // port setup & listen to clients
 const port = process.env.PORT || 5000;

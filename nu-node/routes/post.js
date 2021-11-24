@@ -4,7 +4,7 @@ const router = express.Router();
 const Post = require("../models/Post");
 
 router.get("/", async (req, res) => {
-	const posts = await Post.find().populate("userId");
+	const posts = await Post.find().populate("user");
 	try {
 		if (posts.length === 0) {
 			return res.status(400).json({ message: "Posts not found" });
