@@ -1,13 +1,13 @@
 const { model, Schema } = require("mongoose");
 
 const CommentSchema = Schema({
-	postId: {
+	post: {
 		type: Schema.Types.ObjectId,
 		required: true,
 		trim: true,
 		ref: "Post",
 	},
-	userId: {
+	user: {
 		type: Schema.Types.ObjectId,
 		required: true,
 		trim: true,
@@ -17,12 +17,7 @@ const CommentSchema = Schema({
 		type: String,
 		required: true,
 	},
-	upvotes: {
-		type: Number,
-		required: true,
-		default: 0,
-	},
-	downvotes: {
+	likes: {
 		type: Number,
 		required: true,
 		default: 0,

@@ -2,9 +2,8 @@ const { model, Schema } = require("mongoose");
 
 const PostSchema = Schema({
 	url: { type: String, required: true, trim: true },
-	comments: { type: Object, required: true },
 	likes: { type: Number, required: true },
-	userId: {
+	user: {
 		type: Schema.Types.ObjectId,
 		required: true,
 		trim: true,
