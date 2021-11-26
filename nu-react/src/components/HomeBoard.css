@@ -20,41 +20,6 @@ h1 {
 	padding-top: 30vh;
 }
 
-/* body {
-	font-family: "Ubuntu", sans-serif;
-} */
-/* .navbar-text {
-	font-size: 30px !important;
-}
-
-.container {
-	height: 50vh;
-}
-
-.row {
-	display: flex;
-	align-items: center;
-	min-height: 10em;
-}
-
-.h1 {
-	color: white;
-	font-size: 500px;
-	font-weight: 700;
-	padding-bottom: 50px;
-}
-
-h1 {
-	font-size: 7rem;
-}
 p {
-	color: white;
+	font-size: 17px;
 }
-
-.jumbotron {
-	height: 50vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-} */

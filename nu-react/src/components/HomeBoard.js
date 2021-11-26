@@ -8,14 +8,19 @@ function HomeBoard() {
 				<div className="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
 					<div className="col-lg-8 align-self-end">
 						<h1 className="text-white font-weight-bold">
-							Your Favorite Place for Social Chess Game Aggregation
+							Your Favorite Social Web Service for Chess Game Aggregation
 						</h1>
 						<hr className="divider" />
 					</div>
 					<div className="col-lg-8 align-self-baseline">
 						<p className="text-white mb-5">
-							nuchess helps you share your chess games with other users! Just
-							create an account to start, no strings attached!
+							nuchess is making the world a better place through CRUD-based,
+							distributive application structures to communicate between
+							endpoints; revolutionizing community-based chess game aggregation
+							as you know it.
+						</p>
+						<p className="text-white mb-5">
+							Just create an account to start sharing, no strings attached!
 						</p>
 					</div>
 				</div>

@@ -5,4 +5,6 @@
 .nav-link,
 .navbar-brand {
 	color: white !important;
+	font-size: 17px !important;
+	text-decoration: none;
 }
