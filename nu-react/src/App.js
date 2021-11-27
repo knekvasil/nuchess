@@ -5,6 +5,8 @@ import NavBar from "./components/NavBar";
 import HomeView from "./views/HomeView";
 import SignupView from "./views/SignupView";
 import LoginView from "./views/LoginView";
+import GalleryView from "./views/GalleryView";
+import AuthRoute from "./components/AuthRoute";
 
 function App() {
 	return (
@@ -14,6 +16,9 @@ function App() {
 				<Route path="/" element={<HomeView />} />
 				<Route path="/signup" element={<SignupView />} />
 				<Route path="/login" element={<LoginView />} />
+				<Route element={<AuthRoute />}>
+					<Route path="/gallery" element={<GalleryView />} />
+				</Route>
 			</Routes>
 		</div>
 	);
