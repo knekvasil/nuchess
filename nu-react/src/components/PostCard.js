@@ -8,15 +8,17 @@ const placeholderImg =
 	"https://images.prismic.io/lichess/f54baa80-94ed-4ba1-b42b-afd818ec4b64_Horseybig.png?auto=compress,format";
 
 const PostCard = ({ obj }) => {
+	console.log(obj);
 	return (
 		<Card style={{ width: "15rem" }}>
 			<Card.Body>
-				<Card.Title>Submitted by: {obj.name}</Card.Title>
+				<Card.Title>Submitted by: {obj.user.name}</Card.Title>
 				<img
 					className="postCardImage"
 					src={obj.url ? obj.url : placeholderImg}
 					alt=""
 				/>
+				<h6>🤍 {obj.likes}</h6>
 				<Link to={`/post/${obj._id}`} className="buttonCard btn btn-primary">
 					View More
 				</Link>
