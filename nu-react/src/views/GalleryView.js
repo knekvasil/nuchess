@@ -26,7 +26,6 @@ function GalleryView() {
 	return (
 		<div className="container mt-5">
 			<div className="container">
-				<h2>Gallery</h2>
 				{loading && (
 					<div style={{ textAlign: "center", marginTop: 20 }}>
 						<Spinner

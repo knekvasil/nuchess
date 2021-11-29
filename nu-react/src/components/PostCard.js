@@ -9,18 +9,26 @@ const placeholderImg =
 
 function PostCard({ obj }) {
 	return (
-		<Card style={{ width: "15rem" }}>
+		<Card class="border-light">
 			<Card.Body>
-				<Card.Title>Submitted by: {obj.user.name}</Card.Title>
-				<img
-					className="postCardImage"
-					src={obj.url ? obj.url : placeholderImg}
-					alt=""
-				/>
-				<h6>🤍 {obj.likes}</h6>
 				<Link to={`/post/${obj._id}`} className="buttonCard btn btn-primary">
-					View More
+					<img
+						className="postCardImage"
+						src={obj.url ? obj.url : placeholderImg}
+						alt=""
+					/>
 				</Link>
+
+				<div className="card-floor">
+					<h6>{obj.user.name}</h6>
+					<h6>
+						<a href="https://github.com/knekvasil">
+							<i class="bi bi-heart"></i>
+						</a>
+
+						{obj.likes}
+					</h6>
+				</div>
 			</Card.Body>
 		</Card>
 	);
