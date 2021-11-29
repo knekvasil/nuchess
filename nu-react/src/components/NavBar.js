@@ -23,7 +23,11 @@ function NavBar() {
 					<Nav>
 						{user ? (
 							<>
-								<NavDropdown title={userIcon} id="basic-nav-dropdown-left">
+								<NavDropdown
+									align="end"
+									title={userIcon}
+									id="basic-nav-dropdown-left"
+								>
 									<NavDropdown.Item>
 										<Link to="/gallery" className="Dropdown">
 											Gallery
@@ -45,7 +49,11 @@ function NavBar() {
 							</>
 						) : (
 							<>
-								<NavDropdown title={userIcon} id="basic-nav-dropdown-left">
+								<NavDropdown
+									align="end"
+									title={userIcon}
+									id="basic-nav-dropdown-left"
+								>
 									<NavDropdown.Item>
 										<Link to="/login" className="Dropdown">
 											Login
