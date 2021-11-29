@@ -2,9 +2,23 @@
 	color: white;
 }
 
-.nav-link,
-.navbar-brand {
+a {
 	color: white !important;
-	font-size: 17px !important;
+	text-decoration: none !important;
+}
+
+.Logo {
+	font-size: 30px !important;
+}
+
+a .Dropdown {
+	color: rgb(22, 21, 18, 1) !important;
+}
+
+button {
 	text-decoration: none;
+	border: none;
+	background-color: white;
+	padding: 0px 0px;
+	background-color: transparent;
 }

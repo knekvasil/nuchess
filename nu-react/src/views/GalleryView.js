@@ -23,37 +23,10 @@ function GalleryView() {
 		}, 2000);
 	}
 
-	function handleSearch(event) {
-		setSearch(event.target.value.toLowerCase);
-	}
-
-	function resetPosts() {
-		getPost();
-		setSearch("");
-	}
-
 	return (
 		<div className="container mt-5">
-			<div className="row">
-				<div className="col-md-6 col-sm-6">
-					<h2>Home View</h2>
-				</div>
-				<div className="col-md-3 col-sm-6 mb-3">
-					<input
-						className="form-control"
-						onChange={handleSearch}
-						style={{ display: "flex", alignSelf: "flex-end" }}
-						type="text"
-						placeholder="Search"
-					/>
-				</div>
-				<div className="col-md-3 col-sm-6">
-					<button onClick={resetPosts} className="btn btn-outline-dark">
-						reset
-					</button>
-				</div>
-			</div>
 			<div className="container">
+				<h2>Gallery</h2>
 				{loading && (
 					<div style={{ textAlign: "center", marginTop: 20 }}>
 						<Spinner
@@ -65,7 +38,6 @@ function GalleryView() {
 				)}
 				{posts === null && <h2>No Posts Results</h2>}
 				<div className="row postCards">
-					{/* We are filtering at the same time we are maping that way we get in-time search results */}
 					{posts
 						.filter((post) =>
 							search ? post.name.toLowerCase().includes(search) : post
