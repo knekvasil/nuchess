@@ -60,7 +60,7 @@ function GalleryView() {
 							style={{ height: 80, width: 80, fontWeight: "bold" }}
 							animation="border"
 						/>
-						<h4>Loading...</h4>
+						<h4>Loading posts...</h4>
 					</div>
 				)}
 				{posts === null && <h2>No Posts Results</h2>}

@@ -7,8 +7,7 @@ import "./PostCard.css";
 const placeholderImg =
 	"https://images.prismic.io/lichess/f54baa80-94ed-4ba1-b42b-afd818ec4b64_Horseybig.png?auto=compress,format";
 
-const PostCard = ({ obj }) => {
-	console.log(obj);
+function PostCard({ obj }) {
 	return (
 		<Card style={{ width: "15rem" }}>
 			<Card.Body>
@@ -25,6 +24,6 @@ const PostCard = ({ obj }) => {
 			</Card.Body>
 		</Card>
 	);
-};
+}
 
 export default PostCard;
