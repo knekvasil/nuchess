@@ -10,7 +10,6 @@ function PostView() {
 	const [post, setPost] = useState({});
 	const { id } = useParams();
 	const user = isAuthenticated();
-	console.log(user);
 
 	useEffect(() => {
 		getSinglePost();
@@ -33,15 +32,10 @@ function PostView() {
 					<h2 style={{ fontWeight: "bold", marginTop: "40px" }}>
 						{post.user?.name}
 					</h2>
-
 					<h4> {post.likes}</h4>
-					{user.role === "ADMIN" && (
-						<Link to={`/editPost/${id}`} className="btn-outline-dark btn">
-							Edit
-						</Link>
-					)}
 				</div>
-				{user.id === post.user.id && (
+				{console.log(user)}
+				{user.id === post.user?._id && (
 					<button
 						onClick={handleDelete}
 						className="form-control btn btn-danger"
