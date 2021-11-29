@@ -16,9 +16,9 @@ export const getSingleCommentFromApi = async (id) => {
 
 // POST/comments/comment
 export const createCommentInApi = async (comment) => {
-	const { ...newComment } = comment;
-	console.log("CREATE", newComment);
-	const response = await axios.post(`${apiUrl}/comments/comment`, newComment);
+	// const { ...newComment } = comment;
+	// console.log("CREATE", newComment);
+	const response = await axios.post(`${apiUrl}/comments/comment`, comment);
 	alert("Comment created successfully");
 	return response;
 };

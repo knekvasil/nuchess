@@ -46,9 +46,10 @@ function PostView() {
 		window.location.reload();
 	}
 
-	async function handleCommentDelete(event) {
+	async function handleCommentDelete(event, commentId) {
+		console.log(commentId); // = UNDEFINED
 		event.preventDefault();
-		const response = await deleteCommentInApi(id);
+		const response = await deleteCommentInApi(commentId);
 		window.location.reload();
 	}
 	return (
@@ -77,7 +78,7 @@ function PostView() {
 					/>
 				</div>
 
-				<AddComment obj={{ post: post, user: user }} />
+				<AddComment obj={{ post }} />
 
 				<h2>Comments</h2>
 				{loading && (
@@ -99,7 +100,7 @@ function PostView() {
 							>
 								{(user.id === comment.user?._id || user.role === "ADMIN") && (
 									<button
-										onClick={handleCommentDelete}
+										onClick={(event) => handleCommentDelete(event, comment._id)}
 										className="form-control btn btn-danger"
 									>
 										Delete Comment
