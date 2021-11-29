@@ -10,6 +10,8 @@ import { deletePostInApi, getSinglePostFromApi } from "../services/postService";
 import { deleteCommentInApi, getAllComments } from "../services/commentService";
 import { useNavigate } from "react-router";
 
+import AddComment from "../components/AddComment";
+
 function PostView() {
 	const [post, setPost] = useState({});
 	const [comments, setComments] = useState([]);
@@ -46,7 +48,7 @@ function PostView() {
 
 	async function handleCommentDelete(event) {
 		event.preventDefault();
-		const response = await deleteCommentInApi();
+		const response = await deleteCommentInApi(id);
 		window.location.reload();
 	}
 	return (
@@ -74,8 +76,10 @@ function PostView() {
 						alt=""
 					/>
 				</div>
-				<h2>Comments</h2>
 
+				<AddComment obj={{ post: post, user: user }} />
+
+				<h2>Comments</h2>
 				{loading && (
 					<div style={{ textAlign: "center", marginTop: 20 }}>
 						<Spinner
