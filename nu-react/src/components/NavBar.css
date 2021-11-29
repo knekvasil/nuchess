@@ -1,6 +1,6 @@
-.navbar-light .navbar-brand {
+/* .navbar-light .navbar-brand {
 	color: white;
-}
+} */
 
 a {
 	color: white !important;
@@ -21,4 +21,8 @@ button {
 	background-color: white;
 	padding: 0px 0px;
 	background-color: transparent;
+}
+
+#basic-nav-dropdown-left {
+	padding-right: 100px;
 }

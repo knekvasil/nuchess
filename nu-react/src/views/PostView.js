@@ -103,7 +103,7 @@ function PostView() {
 										onClick={(event) => handleCommentDelete(event, comment._id)}
 										className="form-control btn btn-danger"
 									>
-										Delete Comment
+										<i class="bi bi-trash-fill">Delete Comment</i>
 									</button>
 								)}
 								<CommentCard obj={comment} />

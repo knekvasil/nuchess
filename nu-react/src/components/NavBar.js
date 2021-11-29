@@ -23,14 +23,13 @@ function NavBar() {
 					<Nav>
 						{user ? (
 							<>
-								{/* <p>Welcome, {user.name}</p>
-								<button onClick={logOut}>Sign out</button> */}
-								<NavDropdown title={userIcon} id="basic-nav-dropdown">
+								<NavDropdown title={userIcon} id="basic-nav-dropdown-left">
 									<NavDropdown.Item>
 										<Link to="/gallery" className="Dropdown">
 											Gallery
 										</Link>
 									</NavDropdown.Item>
+
 									<NavDropdown.Item>
 										<Link to="/addPost" className="Dropdown">
 											New Post
@@ -46,7 +45,7 @@ function NavBar() {
 							</>
 						) : (
 							<>
-								<NavDropdown title={userIcon} id="basic-nav-dropdown">
+								<NavDropdown title={userIcon} id="basic-nav-dropdown-left">
 									<NavDropdown.Item>
 										<Link to="/login" className="Dropdown">
 											Login
