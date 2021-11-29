@@ -20,6 +20,7 @@ function NavBar() {
 						{(user.role === "ADMIN" || user.role === "USER") && (
 							<>
 								<Link to="/gallery">Gallery</Link>
+								<Link to="/addPost">New Post</Link>
 							</>
 						)}
 					</Nav>

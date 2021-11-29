@@ -2,7 +2,7 @@ const { model, Schema } = require("mongoose");
 
 const PostSchema = Schema({
 	url: { type: String, required: true, trim: true },
-	likes: { type: Number, required: true },
+	likes: { type: Number, required: true, default: 0 },
 	user: {
 		type: Schema.Types.ObjectId,
 		required: true,

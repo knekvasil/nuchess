@@ -8,6 +8,7 @@ import CommentCard from "../components/Comment";
 import { isAuthenticated } from "../services/authService";
 import { deletePostInApi, getSinglePostFromApi } from "../services/postService";
 import { deleteCommentInApi, getAllComments } from "../services/commentService";
+import { useNavigate } from "react-router";
 
 function PostView() {
 	const [post, setPost] = useState({});
@@ -15,6 +16,7 @@ function PostView() {
 	const [loading, setLoading] = useState(false);
 	const { id } = useParams();
 	const user = isAuthenticated();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		getSinglePost();
@@ -38,12 +40,14 @@ function PostView() {
 	async function handlePostDelete(event) {
 		event.preventDefault();
 		const response = await deletePostInApi(id);
-		return <Navigate to="/gallery" />;
+		navigate("/gallery");
+		window.location.reload();
 	}
 
 	async function handleCommentDelete(event) {
 		event.preventDefault();
 		const response = await deleteCommentInApi();
+		window.location.reload();
 	}
 	return (
 		<div className="container mt-5">
@@ -70,7 +74,7 @@ function PostView() {
 						alt=""
 					/>
 				</div>
-				{comments === null && <h2>No Comments Yet...</h2>}
+				<h2>Comments</h2>
 
 				{loading && (
 					<div style={{ textAlign: "center", marginTop: 20 }}>
