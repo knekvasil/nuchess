@@ -23,6 +23,8 @@ button {
 	background-color: transparent;
 }
 
-#basic-nav-dropdown-left {
-	/* padding-right: 100px; */
+.Dropdown {
+	padding-right: 70px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
