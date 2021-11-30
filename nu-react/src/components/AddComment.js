@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { createCommentInApi } from "../services/commentService";
 import { useEffect, useState } from "react";
 import { isAuthenticated } from "../services/authService";
-import { getSingleCommentFromApi } from "../services/commentService";
 import { Navigate, useParams } from "react-router";
 
 import "./PostCard.css";

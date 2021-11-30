@@ -1,15 +1,9 @@
 /* HomeBoard.css */
 /* @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"); */
 
-.background-gif {
-	background-image: url("https://media.giphy.com/media/l3q2XnJo1OVj2pgmQ/giphy.gif");
-	background-size: cover;
-	background-attachment: fixed;
-	overflow: hidden;
-	height: 100vh;
-
-	margin-top: -56px;
-	z-index: -1;
+.homeboard {
+	/* overflow: hidden; */
+	height: 93vh;
 }
 
 .divider {

@@ -25,8 +25,8 @@ function App() {
 				<Route path="/login" element={<LoginView />} />
 				<Route path="/post/:id" element={<PostView />} />
 				<Route element={<AuthRoute />}>
-					<Route path="/gallery" element={<GalleryView />} />
 					<Route path="/addPost" element={<AddPostView />} />
+					<Route path="/gallery" element={<GalleryView />} />
 				</Route>
 			</Routes>
 		</div>

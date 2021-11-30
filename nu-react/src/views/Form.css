@@ -13,8 +13,8 @@
 	margin: 20px 0;
 }
 
+/* background-image: linear-gradient(270deg, #3c3b3f, #605c3c); */
 .form button {
-	/* background-image: linear-gradient(270deg, #3c3b3f, #605c3c); */
 	border-color: transparent;
 	font-weight: bold;
 	background: linear-gradient(

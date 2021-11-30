@@ -31,7 +31,9 @@ function GalleryView() {
 						style={{
 							textAlign: "center",
 							marginTop: 20,
-							"padding-bottom": "50px",
+							// paddingBottom: "50px",
+							height: "89vh",
+							paddingTop: "300px",
 						}}
 					>
 						<Spinner

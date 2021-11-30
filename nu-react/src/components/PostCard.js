@@ -17,7 +17,7 @@ function PostCard({ obj }) {
 		});
 	}
 	return (
-		<Card class="border-light">
+		<Card className="border-light">
 			<Card.Body>
 				<Link to={`/post/${obj._id}`} className="buttonCard btn btn-primary">
 					<img
@@ -30,8 +30,8 @@ function PostCard({ obj }) {
 				<div className="card-floor">
 					<h6>{obj.user.name}</h6>
 					<h6>
-						<button onClick={handleClick} class="fa-icon">
-							<i class="bi bi-heart-fill"></i>
+						<button onClick={handleClick} className="fa-icon">
+							<i className="bi bi-heart-fill"></i>
 						</button>
 
 						{obj.likes}
