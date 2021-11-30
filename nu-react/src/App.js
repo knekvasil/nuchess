@@ -23,10 +23,11 @@ function App() {
 				<Route path="/" element={<HomeView />} />
 				<Route path="/signup" element={<SignupView />} />
 				<Route path="/login" element={<LoginView />} />
-				<Route path="/post/:id" element={<PostView />} />
+
 				<Route element={<AuthRoute />}>
 					<Route path="/addPost" element={<AddPostView />} />
 					<Route path="/gallery" element={<GalleryView />} />
+					<Route path="/post/:id" element={<PostView />} />
 				</Route>
 			</Routes>
 		</div>
