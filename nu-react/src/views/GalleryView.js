@@ -32,7 +32,7 @@ function GalleryView() {
 							textAlign: "center",
 							marginTop: 20,
 							// paddingBottom: "50px",
-							height: "89vh",
+							height: "88.1vh",
 							paddingTop: "300px",
 						}}
 					>

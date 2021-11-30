@@ -57,43 +57,6 @@ h2 {
 	color: white;
 }
 
-/* .css-selector {
-	background: linear-gradient(
-		91deg,
-		#333333,
-		#dd1818,
-		#ee0979,
-		#ff6a00,
-		#f12711,
-		#f5af19,
-		#636363,
-		#a2ab58,
-		#56ab2f,
-		#a8e063,
-		#f1f2b5,
-		#00f260,
-		#0575e6,
-		#40e0d0,
-		#ff8c00,
-		#ff0080,
-		#1a2a6c,
-		#b21f1f,
-		#ff0080,
-		#2c3e50,
-		#fd746c,
-		#12c2e9,
-		#c471ed,
-		#f64f59,
-		#e6dada,
-		#274046,
-		#1f1c2c,
-		#928dab
-	);
-	background-size: 5600% 5600%;
-
-	animation: AnimationName 60s ease infinite;
-} */
-
 @keyframes AnimationName {
 	0% {
 		background-position: 0% 50%;
@@ -104,4 +67,9 @@ h2 {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.container-form {
+	overflow: hidden;
+	height: 88.1vh;
 }

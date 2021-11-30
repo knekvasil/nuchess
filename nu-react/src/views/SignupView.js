@@ -20,7 +20,7 @@ function SignupView() {
 	}
 
 	return (
-		<div>
+		<div className="container-form mt-5">
 			<form className="form">
 				<h2>Sign Up</h2>
 				<input

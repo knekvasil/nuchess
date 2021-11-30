@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 import { isAuthenticated } from "../services/authService";
 import { createPostInApi, getSinglePostFromApi } from "../services/postService";
 
-// import "./AddPostView.css";
+import "./Form.css";
 
 function AddPostView() {
 	const navigate = useNavigate();
@@ -25,28 +25,26 @@ function AddPostView() {
 
 	return (
 		<>
-			<div className="container">
-				<div className="row" style={{ margin: "0 auto" }}>
-					<div className="col-lg-6 col-md-6 col-sm-12">
-						<form className="form">
-							<h2>Add New Post</h2>
-							<input
-								name="url"
-								value={post.url}
-								onChange={handleChange}
-								placeholder="game url"
-								type="text"
-								className="form-control"
-							/>
-							<button
-								onClick={handleSubmit}
-								className="form-control btn btn-primary"
-							>
-								Add New Post
-							</button>
-						</form>
-						;
-					</div>
+			<div className="container-form mt-5">
+				<div>
+					<form className="form">
+						<h2>Add New Post</h2>
+						<input
+							name="url"
+							value={post.url}
+							onChange={handleChange}
+							placeholder="game url"
+							type="text"
+							className="form-control"
+						/>
+						<button
+							onClick={handleSubmit}
+							className="form-control btn btn-primary"
+						>
+							Add New Post
+						</button>
+					</form>
+					;
 				</div>
 			</div>
 		</>
