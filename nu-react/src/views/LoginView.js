@@ -29,7 +29,7 @@ function LoginView() {
 	return (
 		<div className="container mt-5">
 			<form className="form">
-				<h2>Login View</h2>
+				<h2>Login</h2>
 				<input
 					onChange={handleChange}
 					name="email"
@@ -47,7 +47,7 @@ function LoginView() {
 					placeholder="password"
 				/>
 				<button onClick={handleSubmit} className="form-control btn btn-success">
-					Login
+					<i class="bi bi-box-arrow-in-right"></i>
 				</button>
 			</form>
 		</div>

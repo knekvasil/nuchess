@@ -34,7 +34,7 @@ function AddComment() {
 
 	function handleChange(event) {
 		setComment({ ...comment, [event.target.name]: event.target.value });
-		console.log("POST", comment);
+		console.log("POST", comment[""]);
 	}
 
 	function handleSubmit(event) {
@@ -42,7 +42,7 @@ function AddComment() {
 		let commentObj = {
 			post: post._id,
 			user: user.id,
-			text: comment.text,
+			text: comment[""],
 			likes: 0,
 		};
 		createCommentInApi(commentObj);
@@ -54,21 +54,21 @@ function AddComment() {
 			<Card.Body>
 				<Card.Title>Add Comment:</Card.Title>
 				<form className="form">
-					<input
-						name="text"
-						value={comment.text}
-						onChange={handleChange}
-						placeholder="comment"
-						type="text"
-						className="form-control"
-					/>
-
-					<button
-						onClick={handleSubmit}
-						className="form-control btn btn-primary"
-					>
-						Add New Comment
-					</button>
+					<div class="form-group">
+						<label for="exampleFormControlTextarea1">Example textarea</label>
+						<textarea
+							class="form-control"
+							id="exampleFormControlTextarea1"
+							rows="3"
+							onChange={handleChange}
+						></textarea>
+						<button
+							onClick={handleSubmit}
+							className="form-control btn btn-primary"
+						>
+							Add New Comment
+						</button>
+					</div>
 				</form>
 			</Card.Body>
 		</Card>

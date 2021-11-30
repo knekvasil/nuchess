@@ -48,7 +48,7 @@ function SignupView() {
 					className="form-control"
 				/>
 				<button onClick={handleSubmit} className="form-control btn btn-success">
-					Sign Up
+					<i class="bi bi-person-plus-fill"></i>
 				</button>
 			</form>
 		</div>

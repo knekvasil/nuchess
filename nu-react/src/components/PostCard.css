@@ -54,3 +54,10 @@ h6 {
 .bi {
 	padding-right: 5px;
 }
+
+.fa-icon {
+	color: white !important;
+}
+.fa-icon:hover {
+	color: red !important;
+}

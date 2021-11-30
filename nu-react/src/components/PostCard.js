@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import "./PostCard.css";
 
@@ -8,6 +9,13 @@ const placeholderImg =
 	"https://images.prismic.io/lichess/f54baa80-94ed-4ba1-b42b-afd818ec4b64_Horseybig.png?auto=compress,format";
 
 function PostCard({ obj }) {
+	const [likes, setLikes] = useState(obj.likes);
+
+	function handleClick() {
+		setLikes(() => {
+			return (obj.likes = likes + 1);
+		});
+	}
 	return (
 		<Card class="border-light">
 			<Card.Body>
@@ -22,9 +30,9 @@ function PostCard({ obj }) {
 				<div className="card-floor">
 					<h6>{obj.user.name}</h6>
 					<h6>
-						<a href="https://github.com/knekvasil">
-							<i class="bi bi-heart"></i>
-						</a>
+						<button onClick={handleClick} class="fa-icon">
+							<i class="bi bi-heart-fill"></i>
+						</button>
 
 						{obj.likes}
 					</h6>
