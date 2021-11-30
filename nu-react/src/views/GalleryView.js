@@ -31,7 +31,6 @@ function GalleryView() {
 						style={{
 							textAlign: "center",
 							marginTop: 20,
-							// paddingBottom: "50px",
 							height: "88.1vh",
 							paddingTop: "300px",
 						}}

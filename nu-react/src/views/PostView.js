@@ -12,6 +12,9 @@ import { useNavigate } from "react-router";
 
 import AddComment from "../components/AddComment";
 
+import "./PostView.css";
+import PostViewCard from "../components/PostViewCard";
+
 function PostView() {
 	const [post, setPost] = useState({});
 	const [comments, setComments] = useState([]);
@@ -39,52 +42,23 @@ function PostView() {
 		setPost(response.data);
 	}
 
-	async function handlePostDelete(event) {
-		event.preventDefault();
-		const response = await deletePostInApi(id);
-		navigate("/gallery");
-		window.location.reload();
-	}
-
-	async function handleCommentDelete(event, commentId) {
-		console.log(commentId); // = UNDEFINED
-		event.preventDefault();
-		const response = await deleteCommentInApi(commentId);
-		window.location.reload();
-	}
 	return (
-		<div className="container mt-5">
+		<div className="container-postview mt-5">
+			<PostViewCard obj={post} />
+
 			<div className="row">
-				<div className="col-lg-6 col-md-6 col-sm-12">
-					<h2 style={{ fontWeight: "bold", marginTop: "40px" }}>
-						{post.user?.name}
-					</h2>
-					<h4> {post.likes}</h4>
-				</div>
-
-				{(user.id === post.user?._id || user.role === "ADMIN") && (
-					<button
-						onClick={handlePostDelete}
-						className="form-control btn btn-danger"
-					>
-						Delete Post
-					</button>
-				)}
-				<div className="col-lg-6 col-md-6 col-sm-12">
-					<img
-						style={{ width: 300, margin: "40px auto", display: "flex" }}
-						src={post.url}
-						alt=""
-					/>
-				</div>
-
 				<AddComment obj={{ post }} />
 
 				<h2>Comments</h2>
 				{loading && (
 					<div style={{ textAlign: "center", marginTop: 20 }}>
 						<Spinner
-							style={{ height: 80, width: 80, fontWeight: "bold" }}
+							style={{
+								height: 80,
+								width: 80,
+								fontWeight: "bold",
+								color: "white",
+							}}
 							animation="border"
 						/>
 						<h4>Loading comments...</h4>
@@ -98,14 +72,6 @@ function PostView() {
 								key={comment._id}
 								className="cardBox col-lg-3 col-md-4 col-sm-6 col-xs-12"
 							>
-								{(user.id === comment.user?._id || user.role === "ADMIN") && (
-									<button
-										onClick={(event) => handleCommentDelete(event, comment._id)}
-										className="form-control btn btn-danger"
-									>
-										<i class="bi bi-trash-fill">Delete Comment</i>
-									</button>
-								)}
 								<CommentCard obj={comment} />
 							</div>
 						))}

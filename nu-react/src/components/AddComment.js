@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { isAuthenticated } from "../services/authService";
 import { Navigate, useParams } from "react-router";
 
-import "./PostCard.css";
+import "../views/Form.css";
 import { getSinglePostFromApi } from "../services/postService";
 
 function AddComment() {
@@ -49,28 +49,25 @@ function AddComment() {
 	}
 
 	return (
-		<Card>
-			<Card.Body>
-				<Card.Title>Add Comment:</Card.Title>
-				<form className="form">
-					<div class="form-group">
-						<label for="exampleFormControlTextarea1">Example textarea</label>
-						<textarea
-							class="form-control"
-							id="exampleFormControlTextarea1"
-							rows="3"
-							onChange={handleChange}
-						></textarea>
-						<button
-							onClick={handleSubmit}
-							className="form-control btn btn-primary"
-						>
-							Add New Comment
-						</button>
-					</div>
-				</form>
-			</Card.Body>
-		</Card>
+		<div className="container-comment mt-5">
+			<form className="form">
+				<h2>Add Comment</h2>
+				<div className="form-group">
+					<textarea
+						class="form-control"
+						id="exampleFormControlTextarea1"
+						rows="3"
+						onChange={handleChange}
+					></textarea>
+					<button
+						onClick={handleSubmit}
+						className="form-control btn btn-primary"
+					>
+						<i className="bi bi-chat-fill"></i>
+					</button>
+				</div>
+			</form>
+		</div>
 	);
 }
 

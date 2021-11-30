@@ -1,0 +1,11 @@
+/* PostView.css */
+
+.form-control .btn .btn-danger {
+	width: 40px;
+}
+
+.container-postview {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

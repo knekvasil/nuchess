@@ -27,7 +27,7 @@ function LoginView() {
 	}
 
 	return (
-		<div className="container-form mt-5">
+		<div className="container-comment">
 			<form className="form">
 				<h2>Login</h2>
 				<input

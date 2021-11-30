@@ -1,7 +1,10 @@
-/* PostCard.css */
+/* PostViewCard.css */
 
 .card {
-	width: 50vh;
+	/* background: transparent; */
+	/* background-color: yellow; */
+
+	width: 70vh;
 }
 
 .card-body {
@@ -21,7 +24,6 @@
 h6 {
 	display: flex;
 	font-size: 10px;
-	align-items: baseline;
 }
 
 .buttonCard {
@@ -58,14 +60,4 @@ h6 {
 }
 .fa-icon:hover {
 	color: red !important;
-}
-
-.supraflex {
-	display: flex;
-	justify-content: space-between;
-}
-
-.rightflex {
-	display: flex;
-	align-items: baseline;
 }
