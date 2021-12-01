@@ -5,6 +5,8 @@ import { ButtonToolbar, Spinner } from "react-bootstrap";
 import PostCard from "../components/PostCard";
 import { getAllPosts } from "../services/postService";
 
+import "./GalleryView.css";
+
 function GalleryView() {
 	const [posts, setPosts] = useState([]);
 	const [search, setSearch] = useState("");
@@ -25,7 +27,7 @@ function GalleryView() {
 
 	return (
 		<div className="container mt-5">
-			<div className="container">
+			<div className="container-gallery">
 				{loading && (
 					<div
 						style={{
