@@ -61,7 +61,6 @@ function PostView() {
 							}}
 							animation="border"
 						/>
-						<h4>Loading comments...</h4>
 					</div>
 				)}
 				<div className="row postCards">
