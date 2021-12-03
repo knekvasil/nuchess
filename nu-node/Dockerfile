@@ -6,7 +6,7 @@ COPY . .
 
 RUN npm install 
 
-EXPOSE 8080
+EXPOSE 5000
 
 ENTRYPOINT ["node", "app.js"]
 
