@@ -9,7 +9,6 @@ import "./GalleryView.css";
 
 function GalleryView() {
 	const [posts, setPosts] = useState([]);
-	const [search, setSearch] = useState("");
 	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {

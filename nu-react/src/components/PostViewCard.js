@@ -29,6 +29,7 @@ function PostViewCard({ obj }) {
 		navigate("/gallery");
 		window.location.reload();
 	}
+	
 	return (
 		<Card className="border-light">
 			<Card.Body>

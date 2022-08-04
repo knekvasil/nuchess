@@ -41,4 +41,5 @@ export const isAuthenticated = () => {
 export const logOut = () => {
 	localStorage.removeItem(tokenString);
 	window.location.reload();
+	console.log("Logged out");
 };
